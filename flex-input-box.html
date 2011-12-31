@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Input Box Test Page</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="flex-input-box.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $('*[data-role=flexinput]').each(function() {
+	        window.flexinput(this);
+	    });
+	});
+	</script>
+	<style type="text/css">
+	.fixedWidth {
+	    width: 200px;
+	}
+	
+	.maxHeight {
+	    max-height: 200px;
+	}
+	</style>
+</head>
+<body>
+	<h2>Fixed Width Demo</h2>
+	<div class="fixedWidth" data-role="flexinput">
+	    <textarea>This is some sample text. It will become editable in the textarea.
+
+You can use multi-lines. It will be handled properly.</textarea>       
+	</div>
+	<h2>Fixed Width and Max Height Demo</h2>
+	<div class="fixedWidth maxHeight" data-role="flexinput">
+	    <textarea>This is some sample text. It will become editable in the textarea.
+
+You can use multi-lines. It will be handled properly.</textarea>       
+	</div>
+</body>
+</html>
